@@ -14,7 +14,8 @@ public class Binaryconverter {
         String binary = "";
         while (x >= 1) {
             rem = x % 2;
-            binary = binary + rem;
+//            System.out.println("rem=="+x);
+            binary = rem + binary;
 //            binary.append(rem);  <- use this statement to remove warning
             x = x / 2;
         }
