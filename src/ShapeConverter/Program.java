@@ -1,7 +1,6 @@
 package ShapeConverter;
 
 import java.util.Scanner;
-import java.lang.Math.*;
 
 abstract class Shape {
     double width;
@@ -12,10 +11,12 @@ class Square extends Shape{
     public Square(int x) {
         this.width = x;
     }
+
+    @Override
     public void area(){
 //        area of square = a^2;
-//        a = height/with of the square *note:squares with and height id always same
-        width = width*width;
+//        a = height/with of the square (note:squares with and height id always same)
+        this.width = width*width;
         System.out.println(width);
     }
 }
@@ -25,8 +26,10 @@ class Circle extends Shape{
         this.width = x;
     }
 
+    @Override
     public void area(){
-        width = Math.PI;
+//        this.width = Math.PI;
+        System.out.println(this.width*(Math.pow(Math.PI,2)));
     }
 }
 
